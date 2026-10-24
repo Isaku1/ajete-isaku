@@ -1,0 +1,37 @@
+{
+  "name": "ajete-isaku-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal portfolio of Ajete Isaku — Data Engineer (Azure, Microsoft Fabric, Databricks, Data Warehousing).",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "check:links": "node scripts/check-links.mjs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.544.0",
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-is": "^19.1.1",
+    "recharts": "^2.15.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^22.18.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2"
+  },
+  "overrides": {
+    "react-is": "$react-is"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}

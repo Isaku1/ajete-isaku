@@ -1,0 +1,23 @@
+name: Weekly checks
+
+# Runs every Monday and on demand. A failed run emails the repo owner,
+# so a dead certificate link or a broken build never stays unnoticed.
+on:
+  schedule:
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check certificate and profile links
+        run: node scripts/check-links.mjs
+      - name: Install and build
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
